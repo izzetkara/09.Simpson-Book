@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CMq-f9-3Vk">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="simpson_Book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6jd-Ho-fdi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6jd-Ho-fdi" secondAttribute="trailing" id="0l4-Ux-LV6"/>
+                            <constraint firstItem="6jd-Ho-fdi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4wQ-q4-RMc"/>
+                            <constraint firstItem="6jd-Ho-fdi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OJP-fP-am4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6jd-Ho-fdi" secondAttribute="bottom" id="jqm-Od-tb1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YSI-4v-E1m"/>
+                    <connections>
+                        <outlet property="tableView" destination="6jd-Ho-fdi" id="6rY-Ct-LYf"/>
+                        <segue destination="xla-Mr-Bq9" kind="show" identifier="toDetailsVC" id="1ST-fQ-Eku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="150.66964285714286"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="xKL-81-TRT">
+            <objects>
+                <viewController id="xla-Mr-Bq9" customClass="detailsVC" customModule="simpson_Book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A8d-wf-gNZ" customClass="details">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-6Z-iYa">
+                                <rect key="frame" x="69" y="182" width="276" height="147"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-Uh-e8u">
+                                <rect key="frame" x="117" y="428" width="180" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-MX-P4Z">
+                                <rect key="frame" x="117" y="379" width="180" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="f61-dR-8xl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ui0-Lg-h3w" firstAttribute="bottom" secondItem="t2V-Uh-e8u" secondAttribute="bottom" constant="393" id="4o9-nA-J3f"/>
+                            <constraint firstItem="ezc-MX-P4Z" firstAttribute="leading" secondItem="t2V-Uh-e8u" secondAttribute="leading" id="AuP-ao-8nY"/>
+                            <constraint firstItem="HgM-6Z-iYa" firstAttribute="centerX" secondItem="ezc-MX-P4Z" secondAttribute="centerX" id="OMc-0f-gBX"/>
+                            <constraint firstItem="t2V-Uh-e8u" firstAttribute="top" secondItem="ezc-MX-P4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="Rng-Qs-MFD"/>
+                            <constraint firstItem="ezc-MX-P4Z" firstAttribute="leading" secondItem="ui0-Lg-h3w" secondAttribute="leading" constant="117" id="V7b-eE-3ry"/>
+                            <constraint firstItem="HgM-6Z-iYa" firstAttribute="centerX" secondItem="A8d-wf-gNZ" secondAttribute="centerX" id="af5-Ea-kvn"/>
+                            <constraint firstItem="ezc-MX-P4Z" firstAttribute="top" secondItem="HgM-6Z-iYa" secondAttribute="bottom" constant="50" id="cG9-6u-dO8"/>
+                            <constraint firstItem="ezc-MX-P4Z" firstAttribute="trailing" secondItem="t2V-Uh-e8u" secondAttribute="trailing" id="mN0-Wa-Emb"/>
+                            <constraint firstItem="HgM-6Z-iYa" firstAttribute="leading" secondItem="ui0-Lg-h3w" secondAttribute="leading" constant="69" id="sYn-ri-c4S"/>
+                            <constraint firstItem="t2V-Uh-e8u" firstAttribute="centerY" secondItem="A8d-wf-gNZ" secondAttribute="centerY" id="t0h-K4-D1Q"/>
+                            <constraint firstItem="HgM-6Z-iYa" firstAttribute="top" secondItem="ui0-Lg-h3w" secondAttribute="top" constant="94" id="v5Q-24-EWl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ui0-Lg-h3w"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="HgM-6Z-iYa" id="aus-St-qUX"/>
+                        <outlet property="nameLabel" destination="ezc-MX-P4Z" id="HDd-YN-6ID"/>
+                        <outlet property="occupationLabel" destination="t2V-Uh-e8u" id="bds-ve-fpA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzU-3V-1yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636.2318840579712" y="150.66964285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SGI-bj-YIb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CMq-f9-3Vk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J5N-Wp-ha8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0sB-08-S9P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asr-rn-0u0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107.24637681159422" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+</document>
